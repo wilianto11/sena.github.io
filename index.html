@@ -192,17 +192,14 @@
                 src="assets/images/logo.png"
                 alt="designer luciene"
               />
-              <p>
-                footer lorem ipsum html css js workstation 
-              </p>
+              <div id="statistics"></div>
             </div>
           </div>
           <div class="col-lg-2 offset-lg-2">
             <div class="location-widget">
               <h4>Our Location</h4>
               <p>
-                Jalan Pangeran Jayakarta Dalam No.36D, Mangga Dua Selatan, Kecamatan Sawah Besar, <br /><br /> Kota Jakarta Pusat, Daerah Khusus Jakarta 10730, <br />Indonesia
-                States
+                Jalan Pangeran Jayakarta Dalam No.36D, Mangga Dua Selatan, Kecamatan Sawah Besar, <br /><br /> Kota Jakarta Pusat, Daerah Khusus Jakarta 10730, <br />Indonesia.
               </p>
             </div>
           </div> 
@@ -312,6 +309,65 @@
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
       });
+
+      // Function to update visitor statistics for today, this month, and this year
+function updateStatistics() {
+    // Retrieve existing statistics from local storage
+    let statistics = JSON.parse(localStorage.getItem('visitorStatistics')) || {};
+
+    // Get today's date
+    let today = new Date();
+    let todayDate = today.toISOString().split('T')[0]; // Mendapatkan tanggal hari ini
+
+    // Increment today's count
+    statistics[todayDate] = (statistics[todayDate] || 0) + 1;
+
+    // Get current month and year
+    let currentMonth = today.getMonth() + 1; // Bulan dimulai dari 0 (Januari adalah bulan 0)
+    let currentYear = today.getFullYear();
+
+    // Increment month's count
+    let currentMonthKey = currentYear + '-' + currentMonth;
+    statistics[currentMonthKey] = (statistics[currentMonthKey] || 0) + 1;
+
+    // Increment year's count
+    let currentYearKey = currentYear.toString();
+    statistics[currentYearKey] = (statistics[currentYearKey] || 0) + 1;
+
+    // Save updated statistics back to local storage
+    localStorage.setItem('visitorStatistics', JSON.stringify(statistics));
+
+    // Display statistics
+    displayStatistics(statistics);
+}
+
+// Function to display visitor statistics
+function displayStatistics(statistics) {
+    let statisticsDiv = document.getElementById('statistics');
+    statisticsDiv.innerHTML = '<h2>Visitor Statistics</h2>';
+
+    // Display today's statistics
+    let today = new Date();
+    let todayDate = today.toISOString().split('T')[0];
+    let todayCount = statistics[todayDate] || 0;
+    statisticsDiv.innerHTML += '<p>Today: ' + todayCount + ' visits</p>';
+
+    // Display this month's statistics
+    let currentMonth = today.getMonth() + 1;
+    let currentYear = today.getFullYear();
+    let currentMonthKey = currentYear + '-' + currentMonth;
+    let currentMonthCount = statistics[currentMonthKey] || 0;
+    statisticsDiv.innerHTML += '<p>This month: ' + currentMonthCount + ' visits</p>';
+
+    // Display this year's statistics
+    let currentYearKey = currentYear.toString();
+    let currentYearCount = statistics[currentYearKey] || 0;
+    statisticsDiv.innerHTML += '<p>This year: ' + currentYearCount + ' visits</p>';
+}
+
+// Call updateStatistics function when page loads
+window.onload = updateStatistics;
+
     </script>
   </body>
 </html>
