@@ -1,11 +1,3 @@
-/*
-
-TemplateMo 572 Designer
-
-https://templatemo.com/tm-572-designer
-
-*/
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -208,7 +200,7 @@ header.nav-scrolled .main-navigation {
   padding: 10px 0px;
   position: fixed;
   z-index: 222;
-  background-color: #2a2a2a;
+  background-color: transparent;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
@@ -349,7 +341,7 @@ button:focus:not(:focus-visible) {
 
 .main-banner h2 {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 15px;
