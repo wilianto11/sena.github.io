@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #c7c8cc;
 }
 
 .expanded {
@@ -114,7 +115,7 @@ section {
   margin-bottom: 30px;
 }
 
-.section-heading h2 {
+.section-heading h1 {
   font-size: 22px;
   font-weight: 700;
   text-transform: capitalize;
@@ -124,7 +125,7 @@ section {
 }
 
 @media (min-width: 576px) {
-  .section-heading h2 {
+  .section-heading h1 {
     font-size: 34px;
     line-height: 48px;
     text-transform: uppercase;
@@ -132,14 +133,14 @@ section {
   }
 }
 
-.section-heading h2 em {
+.section-heading h1 em {
   color: #ff565b;
   font-style: normal;
   padding-left: 100px;
   position: relative;
 }
 
-.section-heading h2 em::before {
+.section-heading h1 em::before {
   width: 80px;
   height: 2px;
   background-color: #ff565b;
@@ -339,7 +340,7 @@ button:focus:not(:focus-visible) {
   letter-spacing: 2.5px;
 }
 
-.main-banner h2 {
+.main-banner h1 {
   color: #ffffff;
   font-size: 80px;
   font-weight: 700;
@@ -348,7 +349,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 25px;
 }
 
-.main-banner h2 em {
+.main-banner h1 em {
   font-style: normal;
   color: #ff565b;
 }
@@ -880,7 +881,7 @@ footer .sub-footer a.scroll-to-top:hover {
   }
 }
 
-.page-banner h2 {
+.page-banner h1 {
   color: #ffffff;
   font-size: 36px;
   font-weight: 700;
@@ -890,12 +891,12 @@ footer .sub-footer a.scroll-to-top:hover {
 }
 
 @media (min-width: 768px) {
-  .page-banner h2 {
+  .page-banner h1 {
     font-size: 50px;
   }
 }
 
-.page-banner h2 em {
+.page-banner h1 em {
   font-style: normal;
   color: #ff565b;
 }
@@ -1139,7 +1140,7 @@ section.interior-design .right-content .accordion-body {
   padding: 45px 0px;
 }
 
-.call-to-action h2 {
+.call-to-action h1 {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1149,7 +1150,7 @@ section.interior-design .right-content .accordion-body {
 }
 
 @media (min-width: 992px) {
-  .call-to-action h2 {
+  .call-to-action h1 {
     text-align: left;
     margin: 0px;
     font-size: 35px;
@@ -1166,7 +1167,7 @@ section.interior-design .right-content .accordion-body {
   }
 }
 
-section.explore-item h2 {
+section.explore-item h1 {
   font-size: 34px;
   font-weight: 700;
   color: #2a2a2a;
