@@ -1642,13 +1642,24 @@ section.contact-us-page .right-info ul li span {
   opacity: 1; /* Atur opacity tombol kembali normal saat cursor berada di atas atau saat tombol mendapat fokus */
 }
 
+/* Gaya tombol WhatsApp */
+.whatsapp-button {
+  position: fixed; /* Menetapkan posisi absolut terhadap tata letak dokumen */
+  bottom: 20px; /* Jarak dari bawah */
+  right: 20px; /* Jarak dari kanan */
+  z-index: 9999; /* Untuk memastikan tombol tetap di atas elemen lain */
+}
+
+/* Gaya gambar di dalam tombol WhatsApp */
 .whatsapp-button img {
   width: 60px; /* Lebar gambar WhatsApp */
   height: 60px; /* Tinggi gambar WhatsApp */
   vertical-align: middle; /* Untuk menyesuaikan posisi gambar secara vertikal */
 }
+
+/* Efek scaling saat hover pada tombol WhatsApp */
 .whatsapp-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Memperbesar ukuran tombol saat dihover */
 }
 
 .icon {
